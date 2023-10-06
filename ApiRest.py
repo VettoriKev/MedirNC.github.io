@@ -1,5 +1,6 @@
 # Importa Flask
 from flask import Flask
+import requests
 
 # Crea una instancia de Flask
 app = Flask(__name__)
