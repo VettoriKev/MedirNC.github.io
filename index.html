@@ -1,0 +1,40 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gráfico de datos</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+</head>
+<body>
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <script>
+        var ctx = document.getElementById("myChart").getContext("2d");
+        var chart = new Chart(ctx, {
+            type: "line",
+            data: {
+                labels: ["2023-07-20", "2023-07-21", "2023-07-22"],
+                datasets: [{
+                    label: "Temperatura",
+                    data: [25, 26, 27],
+                    borderColor: "red",
+                    fill: false
+                }, {
+                    label: "Humedad",
+                    data: [50, 51, 52],
+                    borderColor: "blue",
+                    fill: false
+                }]
+            },
+            options: {
+                title: {
+                    text: "Gráfico de datos"
+                }
+            }
+        });
+    </script>
+</body>
+</html>
