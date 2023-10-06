@@ -3,7 +3,7 @@ from flask import Flask
 import requests
 
 # Crea una instancia de Flask
-app = Flask(__name__)
+app = Flask(MedData)
 
 # Define una ruta para el recurso `datos`
 @app.route("/api/datos", methods=["POST"], description="Envía datos")
