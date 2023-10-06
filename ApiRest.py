@@ -6,7 +6,7 @@ import requests
 app = Flask(__name__)
 
 # Define una ruta para el recurso `datos`
-@app.route("/api/datos", methods=["POST"])
+@app.route("/api/datos", methods=["POST"], description="Envía datos")
 
 # Define la función que se ejecutará cuando se reciba una petición HTTP al recurso `datos`
 def datos():
@@ -18,7 +18,7 @@ def datos():
     humedad = data["humedad"]
 
     # Devuelve una respuesta
-    return jsonify({"temperatura": temperatura, "humedad": humedad})
+    return jsonify({"temperatura": temperatura, "humedad": humedad}, content_type="application/json")
 
 # Ejecuta la aplicación
 app.run()
