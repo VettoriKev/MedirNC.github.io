@@ -24,4 +24,4 @@ def datos():
 app.config["ALLOWED_HEADERS"] = ["Content-Type"]
 
 # Ejecuta la aplicación
-app.run(host="0.00.00.0", port=8080)
+#app.run(host="0.00.00.0", port=8080)
